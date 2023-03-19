@@ -16,7 +16,10 @@ export const Register = () => {
   const handelClick = async () => {
     setLoading(true);
     try {
-      await axios.post("/auth/register", { username, email, password });
+      await axios.post(
+        "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/auth/register",
+        { username, email, password }
+      );
       setLoading(false);
       setError(false);
       navigate("/login");

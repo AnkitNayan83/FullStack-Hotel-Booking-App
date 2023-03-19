@@ -22,9 +22,9 @@ export const List = () => {
   const { user } = useContext(AuthContext);
 
   const { data, loading, reFetch } = useFetch(
-    `/hotels?city=${destination.toLowerCase()}&min=${min || 0}&max=${
-      max || 99999
-    }`
+    `https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels?city=${destination.toLowerCase()}&min=${
+      min || 0
+    }&max=${max || 99999}`
   );
 
   const handelClick = () => {

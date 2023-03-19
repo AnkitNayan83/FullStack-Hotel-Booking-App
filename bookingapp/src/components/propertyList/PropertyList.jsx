@@ -4,7 +4,9 @@ import useFetch from "../../hooks/useFetch";
 import "./propertyList.scss";
 
 export const PropertyList = () => {
-  const { data, error, loading } = useFetch("/hotels/countByType");
+  const { data, error, loading } = useFetch(
+    "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels/countByType"
+  );
 
   const imgs = [
     "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",

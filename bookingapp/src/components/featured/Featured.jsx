@@ -20,7 +20,7 @@ export const Featured = () => {
   });
 
   const { data, error, loading } = useFetch(
-    "/hotels/countByCity/?cities=delhi,goa,mumbai"
+    "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels/countByCity/?cities=delhi,goa,mumbai"
   );
 
   const navigate = useNavigate();

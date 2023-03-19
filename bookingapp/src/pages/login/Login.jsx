@@ -14,7 +14,10 @@ export const Login = () => {
   const handelLogin = async () => {
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/auth/login", { username, password });
+      const res = await axios.post(
+        "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/auth/login",
+        { username, password }
+      );
       console.log(res.data);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       navigate("/");

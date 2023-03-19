@@ -42,6 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api"
+  }
 }

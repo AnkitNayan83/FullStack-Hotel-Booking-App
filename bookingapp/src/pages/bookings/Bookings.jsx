@@ -8,8 +8,9 @@ import "./bookings.scss";
 export const Bookings = () => {
   const { user } = useContext(AuthContext);
 
-  const { data, error, loading } = useFetch(`/booking?id=${user._id}`);
-  console.log(data);
+  const { data, error, loading } = useFetch(
+    `https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/booking?id=${user._id}`
+  );
 
   return (
     <div className="bookings">

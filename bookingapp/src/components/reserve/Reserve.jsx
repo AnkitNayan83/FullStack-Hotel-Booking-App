@@ -10,7 +10,9 @@ import "./reserve.scss";
 export const Reserve = ({ setOpenRoom, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const [roomNum, setNum] = useState([]);
-  const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(
+    `https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels/room/${hotelId}`
+  );
   const { date } = useContext(SearchContext);
   const { user } = useContext(AuthContext);
 
@@ -63,17 +65,23 @@ export const Reserve = ({ setOpenRoom, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
-            dates: alldates,
-          });
+          const res = axios.put(
+            `https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/rooms/availability/${roomId}`,
+            {
+              dates: alldates,
+            }
+          );
           return res.data;
         })
       );
-      await axios.post(`/booking`, {
-        user: user._id,
-        room: roomNum,
-        hotel: hotelId,
-      });
+      await axios.post(
+        `https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/booking`,
+        {
+          user: user._id,
+          room: roomNum,
+          hotel: hotelId,
+        }
+      );
       setOpenRoom(false);
       navigate("/booking");
     } catch (error) {

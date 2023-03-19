@@ -3,7 +3,9 @@ import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.scss";
 
 export const FeaturedProperties = () => {
-  const { data, loading } = useFetch("/hotels?featured=true&limit=4");
+  const { data, loading } = useFetch(
+    "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels?featured=true&limit=4"
+  );
   return (
     <div className="fp">
       {loading

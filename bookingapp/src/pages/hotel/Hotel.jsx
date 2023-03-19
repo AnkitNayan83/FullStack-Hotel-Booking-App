@@ -20,7 +20,9 @@ export const Hotel = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const id = location.pathname.split("/")[2];
-  const { data, loading, error } = useFetch(`/hotels/find/${id}`);
+  const { data, loading, error } = useFetch(
+    `https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels/find/${id}`
+  );
   const [slideNo, setSlideNo] = useState(0);
   const [showSlider, setShowSlider] = useState(false);
   const [openRoom, setOpenRoom] = useState(false);
