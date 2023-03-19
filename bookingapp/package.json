@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8080/api"
+  "proxy": "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api"
 }
