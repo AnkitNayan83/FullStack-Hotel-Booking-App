@@ -1,0 +1,135 @@
+.header {
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+  .container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+    &.list {
+      margin-bottom: 15px;
+    }
+    .lists {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+
+      .Listitem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 14px;
+        cursor: pointer;
+        padding: 5px;
+        .icon {
+          margin-right: 7px;
+        }
+
+        &.active {
+          border: 1px solid rgba(255, 255, 255, 0.637);
+          background-color: rgba(255, 255, 255, 0.116);
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.185);
+        }
+      }
+    }
+    .slogan {
+      font-size: 40px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .desc {
+      font-size: 25px;
+      margin: 20px 0;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .Headerbtn {
+      color: white;
+      background-color: teal;
+      padding: 10px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .search {
+      height: 30px;
+      color: black;
+      background-color: white;
+      border: 3px solid goldenrod;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-radius: 5px;
+      position: absolute;
+      bottom: -25px;
+      width: 100%;
+      max-width: 1024px;
+
+      .searchItem {
+        display: flex;
+        align-items: center;
+        // border-right: 3px solid goldenrod;
+        gap: 10px;
+        .searchIcon {
+          color: lightgray;
+          font-size: 25px;
+        }
+        .searchInput {
+          border: none;
+          outline: none;
+          font-size: 18px;
+          &::placeholder {
+            font-size: 18px;
+          }
+        }
+        .searchText {
+          color: rgb(137, 137, 137);
+        }
+
+        .date {
+          position: absolute;
+          top: 50px;
+        }
+
+        .options {
+          position: absolute;
+          top: 50px;
+          background-color: white;
+          color: gray;
+          box-shadow: 5px 5px 11px grey;
+        }
+
+        .optionItem {
+          width: 200px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px;
+
+          .optionButton {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .optionIcon {
+              color: red;
+              cursor: pointer;
+
+              &.add {
+                color: green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
