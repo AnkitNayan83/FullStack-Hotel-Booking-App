@@ -58,7 +58,7 @@ export const Header = ({ type }) => {
     else {
       dispatch({ type: "NEW_SEARCH", payload: { destination, date, options } });
       navigate(
-        "https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels",
+        "/hotels",
         { state: { destination, date, options } }
       );
     }
