@@ -20,7 +20,7 @@ export const Booking = ({ hotelId, roomId, name, b_id }) => {
         : data && (
             <div className="box">
               <div className="leftB">
-                <img src={data.photos ? data.photos[0] : ""} alt="" />
+                <img src={data.photos[0]} alt="" />
                 <div className="desc">
                   <h3>{data.name}</h3>
                   <p>{data.address}</p>
