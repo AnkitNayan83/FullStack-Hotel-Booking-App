@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 import "./booking.scss";
 
 export const Booking = ({ hotelId, roomId, name, b_id }) => {
-  const { data, loading, error, reFetch } = useFetch(`/hotels/find/${hotelId}`);
+  const { data, loading, error, reFetch } = useFetch(`https://full-stack-hotel-booking-d1h7b8kdv-ankitnayan83.vercel.app/api/hotels/find/${hotelId}`);
 
   const handelClick = async () => {
     await axios.delete(
